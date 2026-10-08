@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jules Paolo Agton — Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#F8F7F4',
+                        warmGray: '#EFECE6',
+                        charcoal: '#1C1B1A',
+                        stoneMuted: '#78736B',
+                        borderSubtle: '#E2DFDA',
+                        accentClay: '#A36B52'
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #F8F7F4;
+            color: #1C1B1A;
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, h4, .font-editorial {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Custom smooth scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F8F7F4;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D4D0C7;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #78736B;
+        }
+        .editorial-shadow {
+            box-shadow: 0 10px 30px -10px rgba(28, 27, 26, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-cream text-charcoal min-h-screen selection:bg-accentClay selection:text-white">
+
+    <nav class="fixed top-0 left-0 right-0 z-55 bg-cream/90 backdrop-blur-md border-b border-borderSubtle transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="group flex items-baseline space-x-2">
+                <span class="font-serif text-xl tracking-tight font-medium text-charcoal">Jules Paolo Agton</span>
+                <span class="text-xs font-mono text-stoneMuted hidden sm:inline">/ jules64</span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
+                <a href="#works" class="text-stoneMuted hover:text-charcoal transition-colors">Works</a>
+                <a href="#about" class="text-stoneMuted hover:text-charcoal transition-colors">About</a>
+                <a href="#contact" class="text-stoneMuted hover:text-charcoal transition-colors">Contact</a>
+                <a href="#contact" class="px-4 py-2 rounded-full border border-charcoal/20 hover:bg-charcoal hover:text-cream transition-all text-xs uppercase tracking-widest font-mono">Inquire</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-btn" class="md:hidden text-charcoal p-2 focus:outline-none">
+                <i class="fa-solid fa-bars text-lg"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-cream border-b border-borderSubtle px-6 py-4 space-y-3 font-medium">
+            <a href="#works" class="block text-stoneMuted hover:text-charcoal py-1">Works</a>
+            <a href="#about" class="block text-stoneMuted hover:text-charcoal py-1">About</a>
+            <a href="#contact" class="block text-stoneMuted hover:text-charcoal py-1">Contact</a>
+        </div>
+    </nav>
+
+    <header class="pt-36 pb-20 md:pt-48 md:pb-28 max-w-6xl mx-auto px-6 border-b border-borderSubtle">
+        <div class="max-w-3xl">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-warmGray text-xs font-mono text-stoneMuted mb-6">
+                <span class="w-1.5 h-1.5 rounded-full bg-accentClay"></span>
+                <span>Mechanical Engineering Roots • Visual Creator</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-normal tracking-tight text-charcoal mb-8 leading-[1.15]">
+                Bridging structural precision with <span class="italic font-light text-accentClay">visual storytelling.</span>
+            </h1>
+
+            <p class="text-lg sm:text-xl text-stoneMuted font-light mb-10 leading-relaxed max-w-2xl">
+                I explore the intersection of physical design, scale model photography, graphic poster systems, and AI-assisted engineering operations. Based in Manila, creating timeless digital and physical artifacts.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-6">
+                <a href="#works" class="px-7 py-3.5 rounded-full bg-charcoal text-cream text-sm font-medium hover:bg-accentClay transition-colors flex items-center space-x-2">
+                    <span>Explore Selected Works</span>
+                    <i class="fa-solid fa-arrow-down text-xs"></i>
+                </a>
+                <div class="flex items-center space-x-5 text-sm text-stoneMuted">
+                    <a href="https://github.com" target="_blank" class="hover:text-charcoal transition-colors"><i class="fa-brands fa-github text-base"></i></a>
+                    <a href="https://instagram.com" target="_blank" class="hover:text-charcoal transition-colors"><i class="fa-brands fa-instagram text-base"></i></a>
+                    <a href="https://x.com" target="_blank" class="hover:text-charcoal transition-colors"><i class="fa-brands fa-x-twitter text-base"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="works" class="py-24 max-w-6xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+            <div>
+                <span class="text-xs font-mono uppercase tracking-widest text-stoneMuted block mb-2">Portfolio Index</span>
+                <h2 class="text-3xl sm:text-4xl font-normal text-charcoal">Selected Artifacts</h2>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap gap-2 mt-6 md:mt-0 font-mono text-xs">
+                <button onclick="filterProjects('all')" data-filter="all" class="filter-btn px-4 py-2 rounded-full transition-all bg-charcoal text-cream">All</button>
+                <button onclick="filterProjects('photography')" data-filter="photography" class="filter-btn px-4 py-2 rounded-full transition-all text-stoneMuted hover:text-charcoal bg-warmGray/60">Photography</button>
+                <button onclick="filterProjects('posters')" data-filter="posters" class="filter-btn px-4 py-2 rounded-full transition-all text-stoneMuted hover:text-charcoal bg-warmGray/60">Posters</button>
+                <button onclick="filterProjects('ai')" data-filter="ai" class="filter-btn px-4 py-2 rounded-full transition-all text-stoneMuted hover:text-charcoal bg-warmGray/60">AI & Engineering</button>
+            </div>
+        </div>
+
+        <!-- Project Grid -->
+        <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-16">
+            
+            <!-- Item 1: Photography -->
+            <div class="project-card group cursor-pointer flex flex-col" data-category="photography" onclick="openLightbox('https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=1400&q=85', 'Nocturne Scale Study', 'Detailed scale model diorama photography exploring moody chiaroscuro lighting and cinematic focal lengths.', 'Photography', '2026')">
+                <div class="aspect-[16/11] bg-warmGray overflow-hidden rounded-2xl mb-5 relative editorial-shadow">
+                    <img src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=1000&q=85" alt="Photography Project" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700 ease-out" onerror="this.src='https://placehold.co/800x550/EFECE6/78736B?text=Photography'">
+                    <div class="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/10 transition-colors duration-300 flex items-end justify-end p-6">
+                        <span class="px-3 py-1.5 rounded-full bg-cream/90 backdrop-blur-sm text-xs font-mono text-charcoal opacity-0 group-hover:opacity-100 transition-opacity translate-y-2 group-hover:translate-y-0 duration-300">View Project</span>
+                    </div>
+                </div>
+                <div class="flex items-start justify-between">
+                    <div>
+                        <span class="text-xs font-mono text-accentClay uppercase tracking-widest block mb-1">Photography</span>
+                        <h3 class="text-xl font-normal text-charcoal group-hover:text-accentClay transition-colors">Nocturne Scale Study</h3>
+                    </div>
+                    <span class="text-xs font-mono text-stoneMuted pt-1">2026</span>
+                </div>
+            </div>
+
+            <!-- Item 2: Posters -->
+            <div class="project-card group cursor-pointer flex flex-col" data-category="posters" onclick="openLightbox('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1400&q=85', 'Brutalist Typographic Systems', 'Experimental editorial poster series focusing on minimalist grid structures, raw geometry, and restrained typography.', 'Posters', '2026')">
+                <div class="aspect-[16/11] bg-warmGray overflow-hidden rounded-2xl mb-5 relative editorial-shadow">
+                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=85" alt="Poster Project" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700 ease-out" onerror="this.src='https://placehold.co/800x550/EFECE6/78736B?text=Poster+Design'">
+                    <div class="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/10 transition-colors duration-300 flex items-end justify-end p-6">
+                        <span class="px-3 py-1.5 rounded-full bg-cream/90 backdrop-blur-sm text-xs font-mono text-charcoal opacity-0 group-hover:opacity-100 transition-opacity translate-y-2 group-hover:translate-y-0 duration-300">View Project</span>
+                    </div>
+                </div>
+                <div class="flex items-start justify-between">
+                    <div>
+                        <span class="text-xs font-mono text-accentClay uppercase tracking-widest block mb-1">Posters</span>
+                        <h3 class="text-xl font-normal text-charcoal group-hover:text-accentClay transition-colors">Brutalist Typographic Systems</h3>
+                    </div>
+                    <span class="text-xs font-mono text-stoneMuted pt-1">2026</span>
+                </div>
+            </div>
+
+            <!-- Item 3: AI & Engineering -->
+            <div class="project-card group cursor-pointer flex flex-col" data-category="ai" onclick="openLightbox('https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?auto=format&fit=crop&w=1400&q=85', 'NeuralLens Telemetry Dashboard', 'Full-stack interface design and automated workflow pipeline built for real-time creative data processing.', 'AI & Engineering', '2025')">
+                <div class="aspect-[16/11] bg-warmGray overflow-hidden rounded-2xl mb-5 relative editorial-shadow">
+                    <img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?auto=format&fit=crop&w=1000&q=85" alt="AI Project" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700 ease-out" onerror="this.src='https://placehold.co/800x550/EFECE6/78736B?text=AI+Dashboard'">
+                    <div class="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/10 transition-colors duration-300 flex items-end justify-end p-6">
+                        <span class="px-3 py-1.5 rounded-full bg-cream/90 backdrop-blur-sm text-xs font-mono text-charcoal opacity-0 group-hover:opacity-100 transition-opacity translate-y-2 group-hover:translate-y-0 duration-300">View Project</span>
+                    </div>
+                </div>
+                <div class="flex items-start justify-between">
+                    <div>
+                        <span class="text-xs font-mono text-accentClay uppercase tracking-widest block mb-1">AI & Engineering</span>
+                        <h3 class="text-xl font-normal text-charcoal group-hover:text-accentClay transition-colors">NeuralLens Telemetry Dashboard</h3>
+                    </div>
+                    <span class="text-xs font-mono text-stoneMuted pt-1">2025</span>
+                </div>
+            </div>
+
+            <!-- Item 4: Photography -->
+            <div class="project-card group cursor-pointer flex flex-col" data-category="photography" onclick="openLightbox('https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1400&q=85', 'Monochrome Architecture Series', 'Stark structural studies highlighting geometric shadow plays and raw concrete textures in urban environments.', 'Photography', '2025')">
+                <div class="aspect-[16/11] bg-warmGray overflow-hidden rounded-2xl mb-5 relative editorial-shadow">
+                    <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1000&q=85" alt="Urban Photo" class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700 ease-out" onerror="this.src='https://placehold.co/800x550/EFECE6/78736B?text=Architecture+Photo'">
+                    <div class="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/10 transition-colors duration-300 flex items-end justify-end p-6">
+                        <span class="px-3 py-1.5 rounded-full bg-cream/90 backdrop-blur-sm text-xs font-mono text-charcoal opacity-0 group-hover:opacity-100 transition-opacity translate-y-2 group-hover:translate-y-0 duration-300">View Project</span>
+                    </div>
+                </div>
+                <div class="flex items-start justify-between">
+                    <div>
+                        <span class="text-xs font-mono text-accentClay uppercase tracking-widest block mb-1">Photography</span>
+                        <h3 class="text-xl font-normal text-charcoal group-hover:text-accentClay transition-colors">Monochrome Architecture Series</h3>
+                    </div>
+                    <span class="text-xs font-mono text-stoneMuted pt-1">2025</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="about" class="py-24 max-w-6xl mx-auto px-6 border-t border-borderSubtle">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <div class="lg:col-span-5">
+                <span class="text-xs font-mono uppercase tracking-widest text-stoneMuted block mb-2">Background</span>
+                <h2 class="text-3xl sm:text-4xl font-normal text-charcoal leading-tight">Rooted in engineering, shaped by design.</h2>
+            </div>
+            <div class="lg:col-span-7 space-y-6 text-stoneMuted font-light leading-relaxed text-base sm:text-lg">
+                <p>
+                    I approach creative production with the same rigor and methodology as mechanical engineering. Whether I am framing automotive scale models, composing geometric poster layouts, or architecting AI-assisted code pipelines, my focus remains centered on clarity, proportion, and purpose.
+                </p>
+                <p>
+                    Based in the Philippines, I collaborate with brands, creators, and teams looking for bespoke multidisciplinary design solutions that stand apart from algorithmic trends.
+                </p>
+                <div class="grid grid-cols-2 gap-8 pt-6 border-t border-borderSubtle font-mono text-xs">
+                    <div>
+                        <span class="block text-charcoal font-semibold text-lg mb-1">04+ Years</span>
+                        <span class="text-stoneMuted">Cross-Disciplinary Practice</span>
+                    </div>
+                    <div>
+                        <span class="block text-charcoal font-semibold text-lg mb-1">Manila, PH</span>
+                        <span class="text-stoneMuted">Working Globally</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 max-w-6xl mx-auto px-6 border-t border-borderSubtle">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <div class="lg:col-span-5">
+                <span class="text-xs font-mono uppercase tracking-widest text-accentClay block mb-2">Get in touch</span>
+                <h2 class="text-3xl sm:text-4xl font-normal text-charcoal mb-4">Let's start a conversation.</h2>
+                <p class="text-stoneMuted font-light mb-8">Have a project, commission, or inquiry in mind? Send a message directly.</p>
+                
+                <div class="space-y-3 font-mono text-xs text-stoneMuted">
+                    <p class="flex items-center space-x-3"><i class="fa-regular fa-envelope text-charcoal"></i><span>jules@example.com</span></p>
+                    <p class="flex items-center space-x-3"><i class="fa-solid fa-location-dot text-charcoal"></i><span>Manila, Philippines</span></p>
+                </div>
+            </div>
+
+            <div class="lg:col-span-7 bg-warmGray/40 p-8 sm:p-10 rounded-3xl border border-borderSubtle">
+                <form onsubmit="handleFormSubmit(event)" class="space-y-6">
+                    <div>
+                        <label class="block text-xs font-mono uppercase tracking-wider text-stoneMuted mb-2">Your Name</label>
+                        <input type="text" required placeholder="Alex Mercer" class="w-full bg-cream border border-borderSubtle rounded-xl px-4 py-3.5 text-charcoal text-sm focus:outline-none focus:border-charcoal transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-mono uppercase tracking-wider text-stoneMuted mb-2">Your Email</label>
+                        <input type="email" required placeholder="alex@example.com" class="w-full bg-cream border border-borderSubtle rounded-xl px-4 py-3.5 text-charcoal text-sm focus:outline-none focus:border-charcoal transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-mono uppercase tracking-wider text-stoneMuted mb-2">Message</label>
+                        <textarea rows="4" required placeholder="Tell me about your project..." class="w-full bg-cream border border-borderSubtle rounded-xl px-4 py-3.5 text-charcoal text-sm focus:outline-none focus:border-charcoal transition-colors resize-none"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-4 rounded-xl bg-charcoal text-cream text-sm font-medium hover:bg-accentClay transition-colors">
+                        Send Inquiry
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t border-borderSubtle py-12 bg-warmGray/30">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6 text-sm">
+            <span class="font-serif text-charcoal">Jules Paolo Agton © 2026</span>
+            <div class="flex items-center space-x-6 text-stoneMuted">
+                <a href="https://github.com" target="_blank" class="hover:text-charcoal transition-colors">GitHub</a>
+                <a href="https://instagram.com" target="_blank" class="hover:text-charcoal transition-colors">Instagram</a>
+                <a href="https://x.com" target="_blank" class="hover:text-charcoal transition-colors">X (Twitter)</a>
+            </div>
+            <span class="text-xs font-mono text-stoneMuted">Designed with restraint.</span>
+        </div>
+    </footer>
+
+    <div id="lightbox-modal" class="fixed inset-0 z-60 bg-charcoal/80 backdrop-blur-md hidden flex items-center justify-center p-4 sm:p-8">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-cream bg-white/10 hover:bg-white/20 w-11 h-11 rounded-full flex items-center justify-center transition-all">
+            <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+        <div class="max-w-4xl w-full bg-cream rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row max-h-[90vh] border border-borderSubtle">
+            <div class="md:w-3/5 bg-charcoal flex items-center justify-center overflow-hidden p-2">
+                <img id="lightbox-img" src="" alt="Project Preview" class="max-h-[65vh] w-full object-contain rounded-2xl">
+            </div>
+            <div class="md:w-2/5 p-8 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span id="lightbox-tag" class="text-xs font-mono text-accentClay uppercase tracking-widest">Category</span>
+                        <span id="lightbox-year" class="text-xs font-mono text-stoneMuted">2026</span>
+                    </div>
+                    <h3 id="lightbox-title" class="text-2xl font-normal text-charcoal mb-4">Title</h3>
+                    <p id="lightbox-desc" class="text-sm font-light text-stoneMuted leading-relaxed mb-6">Description...</p>
+                </div>
+                <div class="pt-6 border-t border-borderSubtle flex items-center justify-between">
+                    <span class="text-xs font-mono text-stoneMuted">Jules Paolo Agton Archive</span>
+                    <button onclick="closeLightbox()" class="px-5 py-2.5 bg-charcoal text-cream rounded-full text-xs font-medium hover:bg-accentClay transition-all">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Toast Notification -->
+    <div id="toast-notification" class="fixed bottom-6 right-6 z-60 transform translate-y-32 opacity-0 transition-all duration-300 bg-charcoal text-cream px-6 py-4 rounded-2xl shadow-xl flex items-center space-x-3 text-sm">
+        <i class="fa-solid fa-circle-check text-accentClay"></i>
+        <div>
+            <h4 class="font-medium" id="toast-title">Inquiry Sent</h4>
+            <p class="text-xs text-stoneMuted" id="toast-msg">Thank you. I will reply soon.</p>
+        </div>
+    </div>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        /* Project Filtering */
+        function filterProjects(category) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => {
+                if (btn.getAttribute('data-filter') === category) {
+                    btn.classList.remove('text-stoneMuted', 'bg-warmGray/60');
+                    btn.classList.add('bg-charcoal', 'text-cream');
+                } else {
+                    btn.classList.remove('bg-charcoal', 'text-cream');
+                    btn.classList.add('text-stoneMuted', 'bg-warmGray/60');
+                }
+            });
+
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach(card => {
+                const cardCat = card.getAttribute('data-category');
+                if (category === 'all' || cardCat === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        /* Lightbox Modal Functions */
+        function openLightbox(imgSrc, title, desc, tag, year) {
+            const modal = document.getElementById('lightbox-modal');
+            document.getElementById('lightbox-img').src = imgSrc;
+            document.getElementById('lightbox-title').textContent = title;
+            document.getElementById('lightbox-desc').textContent = desc;
+            document.getElementById('lightbox-tag').textContent = tag;
+            document.getElementById('lightbox-year').textContent = year;
+
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+
+        /* Contact Form Submission Toast */
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const toast = document.getElementById('toast-notification');
+            toast.classList.remove('translate-y-32', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-32', 'opacity-0');
+            }, 4500);
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>
+```
